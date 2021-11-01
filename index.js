@@ -4,6 +4,8 @@ window.onload = init;
 function init() {
     let button = document.getElementById('addButton');
     button.onclick = handleButtonClick;
+
+    loadPlaylist();
 }
 
 function handleButtonClick() {
@@ -16,6 +18,8 @@ function handleButtonClick() {
 
         let ul = document.getElementById('playlist');
         ul.appendChild(li);
+
+        save(songName);
     } else {
         alert('Please enter a song in form');
     }
